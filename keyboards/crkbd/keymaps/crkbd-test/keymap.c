@@ -16,8 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include QMK_KEYBOARD_H
-#include <stdio.h>
+#include QMK_KEYBOARD_H 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3( // Alphas
@@ -158,9 +157,6 @@ void set_keylog(uint16_t keycode, keyrecord_t *record) {
   if (keycode < 60) {
     name = code_to_name[keycode];
   }
-
-  // update keylog
-  snprintf(keylog_str, sizeof(keylog_str), "%dx%d, k%2d : %c",      record->event.key.row, record->event.key.col,      keycode, name);
 }
 
 void oled_render_keylog(void) {
