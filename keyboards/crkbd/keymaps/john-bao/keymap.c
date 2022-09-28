@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|                                            |--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|
                   XXXXXXX,             KC_LALT,             KC_LSFT,             KC_LCTL,              KC_INS,             XXXXXXX,                                                          XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,
   //|--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|                                            |--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|
-                  XXXXXXX,             KC_LGUI,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,                                                          XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,
+                  XXXXXXX,             KC_LGUI,             XXXXXXX,             KC_CAPS,             XXXXXXX,             XXXXXXX,                                                          XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,             XXXXXXX,
   //|--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|  |--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------|
                                                                                                       XXXXXXX,             XXXXXXX,             XXXXXXX,                XXXXXXX,             XXXXXXX,             XXXXXXX
                                                                                       //`--------------------------------------------------------------'  `--------------------------------------------------------------'
@@ -198,5 +198,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     set_keylog(keycode, record);
   }
   return true;
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case CK_ALT:
+            return 500;
+        default:
+            return TAPPING_TERM;
+    }
 }
 #endif // OLED_ENABLE
