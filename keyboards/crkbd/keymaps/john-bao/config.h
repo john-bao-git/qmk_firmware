@@ -31,11 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define IGNORE_MOD_TAP_INTERRUPT
 
 // #define TAPPING_FORCE_HOLD
-// #define TAPPING_TERM 200
+#define TAPPING_TERM 200
 
-// #define TAPPING_TERM_PER_KEY
+#define TAPPING_TERM_PER_KEY
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 #define MATRIX_COL_PINS_RIGHT \
     { F4, F5, B2, F7, B1, B3 }
