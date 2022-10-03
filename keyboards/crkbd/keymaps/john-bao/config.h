@@ -28,12 +28,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define IGNORE_MOD_TAP_INTERRUPT
+// #define IGNORE_MOD_TAP_INTERRUPT
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 200
+// #define TAPPING_FORCE_HOLD
+// #define TAPPING_TERM 200
 
-#define TAPPING_TERM_PER_KEY
+// #define TAPPING_TERM_PER_KEY
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
 
