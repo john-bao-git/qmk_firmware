@@ -201,7 +201,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case T(4, KC_SPC):
+        case LT(4, KC_SPC):
             return 500;
         default:
             return TAPPING_TERM;
