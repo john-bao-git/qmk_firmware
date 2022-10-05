@@ -20,4 +20,10 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
+// Make drag scroll a hold rather than a click
 #define PLOOPY_DRAGSCROLL_MOMENTARY
+
+// #define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 200
+
+#define TAPPING_TERM_PER_KEY
