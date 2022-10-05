@@ -34,12 +34,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [6] = LAYOUT( _______, _______, _______, _______, _______ ),
     [7] = LAYOUT( _______, _______, _______, _______, _______ )
 };
-
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(1, KC_BTN5):
-            return 1500;
-        default:
-            return TAPPING_TERM;
-    }
-}
