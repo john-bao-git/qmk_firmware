@@ -32,7 +32,7 @@
 #endif
 #ifndef PLOOPY_DPI_OPTIONS
 #    define PLOOPY_DPI_OPTIONS \
-        { 1200, 1600, 2400 }
+        { 375, 900, 1375 }
 #    ifndef PLOOPY_DPI_DEFAULT
 #        define PLOOPY_DPI_DEFAULT 1
 #    endif
@@ -41,11 +41,13 @@
 #    define PLOOPY_DPI_DEFAULT 0
 #endif
 #ifndef PLOOPY_DRAGSCROLL_DPI
-#    define PLOOPY_DRAGSCROLL_DPI 100  // Fixed-DPI Drag Scroll
+#    define PLOOPY_DRAGSCROLL_DPI 50  // Fixed-DPI Drag Scroll
 #endif
 #ifndef PLOOPY_DRAGSCROLL_MULTIPLIER
 #    define PLOOPY_DRAGSCROLL_MULTIPLIER 0.75  // Variable-DPI Drag Scroll
 #endif
+
+#define PLOOPY_DRAGSCROLL_INVERT 0
 
 keyboard_config_t keyboard_config;
 uint16_t          dpi_array[] = PLOOPY_DPI_OPTIONS;
@@ -119,12 +121,7 @@ report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
     process_wheel();
 
     if (is_drag_scroll) {
-#ifdef PLOOPY_DRAGSCROLL_H_INVERT
-        // Invert horizontal scroll direction
-        mouse_report.h = -mouse_report.x;
-#else
         mouse_report.h = mouse_report.x;
-#endif
 #ifdef PLOOPY_DRAGSCROLL_INVERT
         // Invert vertical scroll direction
         mouse_report.v = -mouse_report.y;
