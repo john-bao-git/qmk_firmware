@@ -26,10 +26,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         | Discord Mute | Discord Overlay  | Screenshot |
         | Medal Clip   |                  |            |
         | Volume Down  | Media Play/Pause | Volume Up  |
-     */
+    */
+    // [0] = LAYOUT(
+    //     KC_LALT,         S(RSFT(KC_GRV)),   S(LWIN(SWIN(KC_S))),
+    //     KC_F10,          XXXXXXX,           XXXXXXX,
+    //     KC_VOLD,         KC_MPLY,           KC_VOLU
+    // ),
+
+    /*
+        Rotated
+        | Volume Down      | Medal Clip | Discord Mute    |
+        | Media Play/Pause |            | Discord Overlay |
+        | Volume Up        |            | Screenshot      |
+    */
+
     [0] = LAYOUT(
-        KC_LALT,         S(RSFT(KC_GRV)),   S(LWIN(SWIN(KC_S))),
-        KC_F10,          XXXXXXX,           XXXXXXX,
-        KC_VOLD,         KC_MPLY,           KC_VOLU
+        KC_VOLD,            KC_F10,       KC_LALT,
+        KC_MPLY,            XXXXXXX,      S(RSFT(KC_GRV)),
+        KC_VOLU,            XXXXXXX,      S(LWIN(SWIN(KC_S)))
     ),
 };
