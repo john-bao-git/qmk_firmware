@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define USE_MATRIX_I2C
 
-/* Select hand configuration */ 
+/* Select hand configuration */
 
 #define MASTER_LEFT
 // #define MASTER_RIGHT
@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAPPING_TERM_PER_KEY
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 #define MATRIX_COL_PINS_RIGHT \
     { F4, F5, B2, F7, B1, B3 }
