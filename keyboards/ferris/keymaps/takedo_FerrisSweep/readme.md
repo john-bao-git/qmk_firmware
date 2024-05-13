@@ -97,3 +97,7 @@ Info:
 Compilation Instructions
 ---
 Use this to compile in QMK_MSYS `qmk compile -kb ferris/sweep -km "takedo_FerrisSweep" -e MAKECMDGOALS=uf2-split-left`
+
+Creating json file
+---
+`qmk c2json ~/qmk_firmware/keyboards/ferris/keymaps/username/keymap.c`
