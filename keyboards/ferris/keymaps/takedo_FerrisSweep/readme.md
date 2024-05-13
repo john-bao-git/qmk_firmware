@@ -100,4 +100,4 @@ Use this to compile in QMK_MSYS `qmk compile -kb ferris/sweep -km "takedo_Ferris
 
 Creating json file
 ---
-`qmk c2json ~/qmk_firmware/keyboards/ferris/keymaps/username/keymap.c`
+Run command while in keymaps folder `qmk c2json -kb ferris -km takedo_FerrisSweep`
