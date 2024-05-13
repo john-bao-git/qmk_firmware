@@ -93,3 +93,7 @@ Layer 5 - Gaming Layer
 Info:
 - Uses (2) instead of (Bksp) since some games cannot use (Bksp)
 - I don't use (/) when gaming, so I use it for toggling the layer instead
+
+Compilation Instructions
+---
+Use this to compile in QMK_MSYS: qmk compile -kb ferris/sweep -km "takedo_FerrisSweep" -e MAKECMDGOALS=uf2-split-left
