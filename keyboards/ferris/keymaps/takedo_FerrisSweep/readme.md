@@ -1,4 +1,4 @@
-A usable default keymap for the Ferris keyboard
+Colemak Keyboard influenced by Miryoku
 ===============================================
 
 Keymaps in general are quite personal, so it is difficult to come up with a default that will suit every user.
@@ -96,4 +96,4 @@ Info:
 
 Compilation Instructions
 ---
-Use this to compile in QMK_MSYS: qmk compile -kb ferris/sweep -km "takedo_FerrisSweep" -e MAKECMDGOALS=uf2-split-left
+Use this to compile in QMK_MSYS `qmk compile -kb ferris/sweep -km "takedo_FerrisSweep" -e MAKECMDGOALS=uf2-split-left`
