@@ -18,6 +18,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+enum custom_keycodes {
+    KC_BIN = SAFE_RANGE,
+    KC_CASE,
+    KC_COMBO,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3( // Alphas
   //,-----------------------------------------------------------------------------------------------------------------------------------.                                              ,-----------------------------------------------------------------------------------------------------------------------------------.
@@ -117,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------|  |---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------|
                                                                                                             KC_DEL,              KC_BSPC,  MT(MOD_LSFT,KC_ENT),                  KC_ENT,                 KC_0,                TG(7)
                                                                                           //`-----------------------------------------------------------------'  `-----------------------------------------------------------------'
-  ),
+  )
 };
 
 #ifdef OLED_ENABLE
@@ -207,33 +213,28 @@ bool oled_task_user(void) {
     return false;
 }
 
-enum custom_keycodes {
-    KC_BIN = SAFE_RANGE,
-    KC_CASE,
-    KC_COMBO,
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keybode) {
+    switch (keycode) {
         case KC_BIN:
             if (record->event.pressed) {
                 SEND_STRING("bn");
-            } else {}
-            break;
+            }
+            return false;
         case KC_CASE:
             if (record->event.pressed) {
                 SEND_STRING("cs");
-            } else {}
-            break;
+            }
+            return false;
         case KC_COMBO:
             if (record->event.pressed) {
                 SEND_STRING("cb");
-            } else {}
-            break;
+            }
+            return false;
         default:
             if (record->event.pressed) {
                 set_keylog(keycode, record);
             }
+            break;
     }
 
     return true;
